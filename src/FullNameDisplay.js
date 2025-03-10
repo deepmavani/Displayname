@@ -9,6 +9,8 @@ const FullNameDisplay = () => {
     e.preventDefault();
     if (firstName && lastName) {
       setFullName(`${firstName} ${lastName}`);
+    } else {
+      setFullName(""); 
     }
   };
 
@@ -38,7 +40,7 @@ const FullNameDisplay = () => {
         <br />
         <button type="submit">Submit</button>
       </form>
-      {<h2>Full Name: {fullName}</h2>}
+      {fullName && <h2>Full Name: {fullName}</h2>}
     </div>
   );
 };
